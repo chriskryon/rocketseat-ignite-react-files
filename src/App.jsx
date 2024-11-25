@@ -1,18 +1,25 @@
-import { useState } from "react";
-import "./App.css";
 import { Header } from "./components/Header";
-import './global.css'
+import Post from "./Post";
+
+import "./global.css";
+import styles from './App.module.css'
 
 function App() {
-	const [count, setCount] = useState(0);
 
-	return (
-		<>
-			<div>
-				<Header />
-			</div>
-		</>
-	);
+  return (
+    <div>
+      <Header />
+	  <div className={styles.wrapper}>
+		<aside>
+			sidebar
+		</aside>
+		<main>
+			<Post author="John Doe" content="Hello, world!" />
+			<Post author="Jane Smith" content="Hi there!" />
+		</main>
+	  </div>
+    </div>
+  );
 }
 
 export default App;
