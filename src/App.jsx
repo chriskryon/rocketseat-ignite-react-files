@@ -1,9 +1,9 @@
 import { Header } from "./components/Header";
-import Post from "./Post";
 
+import { Sidebar } from "./components/Sidebar";
+import { Post } from "./components/Post";
 import "./global.css";
 import styles from './App.module.css'
-import { Sidebar } from "./components/Sidebar";
 
 function App() {
 
@@ -15,8 +15,7 @@ function App() {
 			<Sidebar />
 		</aside>
 		<main>
-			<Post author="John Doe" content="Hello, world!" />
-			<Post author="Jane Smith" content="Hi there!" />
+			<Post />
 		</main>
 	  </div>
     </div>
